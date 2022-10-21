@@ -60,7 +60,7 @@ class NFLPlayer extends SpriteComponent
     //super.onCollision(intersectionPoints, other);
 
     if (other is NFLPlayer) {
-      _clearMarkers();
+      clearMarkers();
     }
     // else if (other is NFLBall) {
     //   other.hitBox.collisionType = CollisionType.inactive;
@@ -77,7 +77,7 @@ class NFLPlayer extends SpriteComponent
   void onDragStart(DragStartEvent event) {
     if (!isTeamsTurn) return;
 
-    _clearMarkers();
+    clearMarkers();
     _canvasOffset = event.devicePosition - position;
     _addMarker(position);
   }
@@ -102,7 +102,7 @@ class NFLPlayer extends SpriteComponent
 
   ///////// Private functions /////////
 
-  void _clearMarkers() {
+  void clearMarkers() {
     for (var element in _playMarkers) {
       gameRef.remove(element);
     }

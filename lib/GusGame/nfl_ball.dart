@@ -50,6 +50,7 @@ class NFLBall extends SpriteComponent with HasGameRef, CollisionCallbacks {
       }
 
       currentPlayer!.onTouchDownScored(currentPlayer!);
+      currentPlayer!.clearMarkers();
       //currentPlayer = null;
       //deactivate();
     } else if (other is NFLPlayer) {
