@@ -32,6 +32,6 @@ class _ScoreBoardState extends State<ScoreBoard> {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Home $_teamAScore - $_teamBScore Away | Downs: $_downs');
+    return Text('H $_teamAScore - $_teamBScore A | D: $_downs');
   }
 }
